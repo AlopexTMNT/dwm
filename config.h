@@ -88,6 +88,7 @@ static Key keys[] = {
 	{ MODKEY,	XK_F5,	spawn,	SHCMD("setxkbmap us")	},
 	{ MODKEY,	XK_F6,	spawn,	SHCMD("setxkbmap gr")	},
 	{ MODKEY,	XK_w,	spawn,	SHCMD("brave") },
+	{ 0,		XK_Print,	spawn,	SHCMD("cd Pictures && maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
