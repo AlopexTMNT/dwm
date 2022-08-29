@@ -94,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY,	XK_F5,	spawn,	SHCMD("setxkbmap us")	},
 	{ MODKEY,	XK_F6,	spawn,	SHCMD("setxkbmap gr")	},
 	{ MODKEY,	XK_w,	spawn,	SHCMD("firefox") },
+	{ MODKEY,	XK_e,	spawn,	SHCMD("signal-desktop") },
 	{ 0,		XK_Print,	spawn,	SHCMD("cd Pictures && maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
 	{ MODKEY,       XK_r,           spawn,  SHCMD("cd Videos/Record && ffmpeg -f x11grab -video_size 1366x768 -framerate 25 -i $DISPLAY -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac rec-$(date '+%y%m%d-%H%M-%S').mp4") },
         { MODKEY|ShiftMask,     XK_r,   spawn,  SHCMD("killall ffmpeg") },
