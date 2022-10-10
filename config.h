@@ -96,7 +96,7 @@ static Key keys[] = {
 	{ MODKEY,	XK_w,	spawn,	SHCMD("firefox") },
 /*	{ MODKEY,	XK_e,	spawn,	SHCMD("signal-desktop") }, */
 	{ 0,		XK_Print,	spawn,	SHCMD("cd Pictures && maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
-	{ MODKEY,       XK_r,           spawn,  SHCMD("cd Videos/Record && ffmpeg -f x11grab -video_size 1366x768 -framerate 25 -i $DISPLAY -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac rec-$(date '+%y%m%d-%H%M-%S').mp4") },
+	{ MODKEY,       XK_r,           spawn,  SHCMD("cd Videos/Record && ffmpeg -f x11grab -video_size 1366x768 -framerate 25 -i $DISPLAY -f alsa -i hw:0 -f pulse -ac 2 -ar 48000 -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor -filter_complex amix=inputs=2 -c:v libx264 -preset ultrafast -c:a aac rec-$(date '+%y%m%d-%H%M-%S').mp4") },
         { MODKEY|ShiftMask,     XK_r,   spawn,  SHCMD("killall ffmpeg") },
         { MODKEY|ShiftMask,     XK_s,   spawn,  SHCMD(". ~/.scripts/./poweroptions.sh") },
 	TAGKEYS(                        XK_1,                      0)
