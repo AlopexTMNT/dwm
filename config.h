@@ -93,7 +93,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,	XK_F5,	spawn,	SHCMD("setxkbmap us")	},
 	{ MODKEY,	XK_F6,	spawn,	SHCMD("setxkbmap gr")	},
-	{ MODKEY,	XK_w,	spawn,	SHCMD("firefox-bin") },
+	{ MODKEY,	XK_w,	spawn,	SHCMD("firefox") },
 	{ MODKEY,	XK_n,	spawn,	SHCMD("vmplayer") },
 	{ MODKEY,	XK_e,	spawn,	SHCMD("signal-desktop") },
 	{ 0,		XK_Print,	spawn,	SHCMD("cd Pictures && maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
